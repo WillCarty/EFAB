@@ -18,6 +18,14 @@ class Test : NetworkModel {
     var title : String?
     var body : String?
     
+    // Request Type
+    enum RequestType {
+        case getPost
+        case getPosts
+        case createPost
+    }
+    var requestType = RequestType.getPost
+    
     // empty constructor
     required init() {}
     
@@ -31,18 +39,43 @@ class Test : NetworkModel {
     
     // Always return HTTP.GET
     func method() -> Alamofire.HTTPMethod {
-        return .get
+        switch requestType {
+        case .getPost, .getPosts:
+            return .get
+            default:
+            return .post
+        }
+        
     }
     
     // A sample path to a single post
     func path() -> String {
-        return "/posts/4"
+        switch requestType {
+        case .getPost:
+            return "/posts/1"
+        case .getPosts:
+            return "/posts"
+        case .createPost:
+            return"/posts"
+        }
+       
     }
-
     // Demo object isn't being posted to a server, so just return nil
     func toDictionary() -> [String: AnyObject]? {
-        return nil
+    switch requestType {
+    case .createPost:
+    var params: [String: AnyObject] = [:]
+    
+    params[Constants.Test.userId] = userId as AnyObject?? ?? 0 as AnyObject?
+    params[Constants.Test.title] = title as AnyObject?? ?? "" as AnyObject?
+    params[Constants.Test.body] = body as AnyObject?? ?? "" as AnyObject?
+    
+    return params
+    default:
+    return nil
     }
+    }
+ 
     
     // Helper method for debugging
     func description() -> String {

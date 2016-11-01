@@ -17,9 +17,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         
         let test = Test()
-        print("making call")
         
-        request(WebServices.AuthRouter.restRequest(test)).response { (d) in
+        print("starting call")
+        WebServices.shared.getObject(test) { (object, error) in
+            print("call returned")
+            if let object = object {
+                print(object.description())
+            }else{
+                print(error ?? Constants.JSON.unknownError)
+            }
+        }
+        print("call made")
+    }
+    
+}
+    
+/*        request(WebServices.AuthRouter.restRequest(test)).response { (d) in
             let request = d.request
             let response = d.response
             let data = d.data
@@ -70,4 +83,4 @@ class ViewController: UIViewController {
 
 
 }
-
+*/
