@@ -23,6 +23,8 @@
 		26CCBFC71DC9317F00F4C54E /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFC61DC9317F00F4C54E /* RegisterViewController.swift */; };
 		26CCBFC91DC9319200F4C54E /* BudgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFC81DC9319200F4C54E /* BudgetListViewController.swift */; };
 		26CCBFCB1DCA204200F4C54E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFCA1DCA204200F4C54E /* User.swift */; };
+		26CCBFCD1DCA2E6A00F4C54E /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFCC1DCA2E6A00F4C54E /* Utils.swift */; };
+		26CCBFCF1DCA355900F4C54E /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFCE1DCA355900F4C54E /* UserStore.swift */; };
 		DBA86705146BE2AA7D9DD246 /* Pods_EFAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB047E0388EE6BB86066523 /* Pods_EFAB.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +49,8 @@
 		26CCBFC61DC9317F00F4C54E /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RegisterViewController.swift; path = ViewControllers/RegisterViewController.swift; sourceTree = "<group>"; };
 		26CCBFC81DC9319200F4C54E /* BudgetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BudgetListViewController.swift; path = ViewControllers/BudgetListViewController.swift; sourceTree = "<group>"; };
 		26CCBFCA1DCA204200F4C54E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = User.swift; path = Models/User.swift; sourceTree = "<group>"; };
+		26CCBFCC1DCA2E6A00F4C54E /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Utils.swift; path = Components/Utils.swift; sourceTree = "<group>"; };
+		26CCBFCE1DCA355900F4C54E /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserStore.swift; path = Components/UserStore.swift; sourceTree = "<group>"; };
 		5CC56027C09759BDF5440BBF /* Pods-EFAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.debug.xcconfig"; sourceTree = "<group>"; };
 		6AB047E0388EE6BB86066523 /* Pods_EFAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3963E59F9FC5A524A83E7D9 /* Pods-EFAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +129,8 @@
 			isa = PBXGroup;
 			children = (
 				26CCBFB01DC7CB6C00F4C54E /* Constants.swift */,
+				26CCBFCC1DCA2E6A00F4C54E /* Utils.swift */,
+				26CCBFCE1DCA355900F4C54E /* UserStore.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -311,6 +317,8 @@
 				26CCBFB11DC7CB6C00F4C54E /* Constants.swift in Sources */,
 				26CCBFC91DC9319200F4C54E /* BudgetListViewController.swift in Sources */,
 				26CCBFCB1DCA204200F4C54E /* User.swift in Sources */,
+				26CCBFCD1DCA2E6A00F4C54E /* Utils.swift in Sources */,
+				26CCBFCF1DCA355900F4C54E /* UserStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
