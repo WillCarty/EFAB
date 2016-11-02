@@ -23,6 +23,14 @@ class BudgetListViewController: UIViewController {
             performSegue(withIdentifier: "PresentLoginNoAnimation", sender: self)
         }
     }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        UserStore.shared.logout {
+        self.performSegue(withIdentifier:"PresentLogin", sender: self)
+    }
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
