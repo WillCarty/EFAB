@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class RegisterViewController: UIViewController {
    
@@ -24,6 +25,50 @@ class RegisterViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func registerTapped(_ sender: UIButton){
+        // Validate user input
+        guard let username = usernameTextField.text , username != "" else {
+            // show error
+            let alert = Utils.createAlert("Login error", message: "Please provide a username", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        guard let email = emailTextField.text , email != "" else {
+            // show error
+            let alert = Utils.createAlert("Login error", message: "Please provide an email", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        guard let password = passwordTextField.text , password != "" else {
+            // show error
+            let alert = Utils.createAlert("Login error", message: "Please provide a password", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        guard let confirm = confirmTextField.text , password == confirm else {
+            // show error
+            let alert = Utils.createAlert("Login error", message: "Passwords do no match", dismissButtonTitle: "Close")
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        // Going to go ahead with the register
+        MBProgressHUD.showAdded(to: view, animated: true)
+        
+        let user = User(username: username, password: password, email: email)
+        
+        UserStore.shared.register(user) { (success, error) in
+            MBProgressHUD.hide(for: self.view, animated: true)
+            
+            if success {
+                self.dismiss(animated: true, completion: nil)
+            }else if let error = error {
+                self.present(Utils.createAlert(message: error), animated: true, completion: nil)
+            }else{
+                self.present(Utils.createAlert(message: Constants.JSON.unknownError), animated: true, completion: nil)
+            }
+        }
     }
     
 

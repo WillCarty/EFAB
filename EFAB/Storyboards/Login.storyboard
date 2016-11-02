@@ -121,6 +121,9 @@
                                 <rect key="frame" x="289" y="241" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Register"/>
+                                <connections>
+                                    <action selector="registerTapped:" destination="GIp-Yj-oqI" eventType="touchUpInside" id="UWB-Zt-iUc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
