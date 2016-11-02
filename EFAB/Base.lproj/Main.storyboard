@@ -62,6 +62,45 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="PCI-cB-cve"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pgn-gX-xIT">
+                                <rect key="frame" x="0.0" y="103" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTu-Sz-VOi">
+                                        <rect key="frame" x="356" y="8" width="11" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="next button icon-dark"/>
+                                        <connections>
+                                            <action selector="forwardTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JzO-v5-Us1"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Oct 1 - Oct 7" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR0-cJ-JQw">
+                                        <rect key="frame" x="73" y="12" width="228" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cor-yk-oR7">
+                                        <rect key="frame" x="8" y="8" width="11" height="22"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="nav back icon -dark"/>
+                                        <connections>
+                                            <action selector="backTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MXY-FT-pvr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VLJ-k8-tiY">
+                                <rect key="frame" x="0.0" y="144" width="375" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="Week"/>
+                                    <segment title="Month"/>
+                                </segments>
+                                <color key="tintColor" red="1" green="0.39550004150000001" blue="0.02211644338" alpha="1" colorSpace="calibratedRGB"/>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
@@ -81,6 +120,11 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="backButton" destination="Cor-yk-oR7" id="qYz-ql-fig"/>
+                        <outlet property="dateLabel" destination="AR0-cJ-JQw" id="BkZ-nK-1qe"/>
+                        <outlet property="forwardButton" destination="fTu-Sz-VOi" id="XMk-cZ-gkf"/>
+                        <outlet property="tableView" destination="YXd-2D-QR2" id="AKr-MP-L5o"/>
+                        <outlet property="timeControl" destination="VLJ-k8-tiY" id="ehg-p8-9Er"/>
                         <segue destination="W46-7V-ddF" kind="presentation" identifier="PresentLogin" id="aiJ-5k-iwM"/>
                         <segue destination="W46-7V-ddF" kind="presentation" identifier="PresentLoginNoAnimation" animates="NO" id="Tq5-er-F7p"/>
                     </connections>
@@ -238,10 +282,29 @@
             </objects>
             <point key="canvasLocation" x="135" y="123"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="j2F-7b-eHV">
+            <objects>
+                <viewController id="bDR-TH-m6p" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Tgn-gz-i6h"/>
+                        <viewControllerLayoutGuide type="bottom" id="ztM-7m-nvG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JVE-Jx-FNY">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MKS-Ge-j0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" width="25" height="25"/>
         <image name="logout" width="25" height="25"/>
+        <image name="nav back icon -dark" width="11" height="20"/>
+        <image name="next button icon-dark" width="11" height="20"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="aiJ-5k-iwM"/>

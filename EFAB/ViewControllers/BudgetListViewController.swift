@@ -7,9 +7,17 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 class BudgetListViewController: UIViewController {
 
+   
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var timeControl: UISegmentedControl!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var forwardButton: UIButton!
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -27,9 +35,14 @@ class BudgetListViewController: UIViewController {
     @IBAction func logoutTapped(_ sender: Any) {
         UserStore.shared.logout {
         self.performSegue(withIdentifier:"PresentLogin", sender: self)
-    }
+      }
     }
     
+    @IBAction func backTapped(_ sender: Any) {
+    }
+   
+    @IBAction func forwardTapped(_ sender: Any) {
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
