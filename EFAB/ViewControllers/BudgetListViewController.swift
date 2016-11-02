@@ -43,6 +43,10 @@ class BudgetListViewController: UIViewController {
    
     @IBAction func forwardTapped(_ sender: Any) {
     }
+   
+    @IBAction func timePeriodChanged(_ sender: Any) {
+        print("period changed")
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
