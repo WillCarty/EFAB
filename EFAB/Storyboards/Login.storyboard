@@ -55,6 +55,9 @@
                                 <rect key="frame" x="291" y="157" width="68" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="LoginTapped:" destination="kt3-dq-n4Q" eventType="touchUpInside" id="hBv-sO-eoU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vbk-th-3tb">
                                 <rect key="frame" x="216" y="157" width="67" height="30"/>
