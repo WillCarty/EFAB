@@ -17,11 +17,17 @@ class BudgetListViewController: UIViewController {
     @IBOutlet weak var timeControl: UISegmentedControl!
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var forwardButton: UIButton!
+    
+    let refreshControl = UIRefreshControl()
+    var currentDate = Utils.adjustedTime()
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // Do any additional setup after loading the view.
+        
+        refreshControl.addTarget(self, action: #selector(BudgetListViewController.loadCategories), for:
+            .valueChanged)
+        tableView.addSubview(refreshControl)
     }
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -30,6 +36,11 @@ class BudgetListViewController: UIViewController {
             
             performSegue(withIdentifier: "PresentLoginNoAnimation", sender: self)
         }
+    }
+    
+    func loadCategories() {
+        self.refreshControl.endRefreshing()
+    
     }
     
     @IBAction func logoutTapped(_ sender: Any) {

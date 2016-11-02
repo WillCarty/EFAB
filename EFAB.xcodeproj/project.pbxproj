@@ -28,6 +28,7 @@
 		26CCBFD21DCA678100F4C54E /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFD11DCA678100F4C54E /* CategoryCell.swift */; };
 		26CCBFD41DCA6DD500F4C54E /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFD31DCA6DD500F4C54E /* AddCategoryViewController.swift */; };
 		26CCBFD61DCA71E800F4C54E /* ExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFD51DCA71E800F4C54E /* ExpenseViewController.swift */; };
+		26CCBFD81DCA805C00F4C54E /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26CCBFD71DCA805C00F4C54E /* Category.swift */; };
 		DBA86705146BE2AA7D9DD246 /* Pods_EFAB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB047E0388EE6BB86066523 /* Pods_EFAB.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +58,7 @@
 		26CCBFD11DCA678100F4C54E /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CategoryCell.swift; path = TableCells/CategoryCell.swift; sourceTree = "<group>"; };
 		26CCBFD31DCA6DD500F4C54E /* AddCategoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddCategoryViewController.swift; path = ViewControllers/AddCategoryViewController.swift; sourceTree = "<group>"; };
 		26CCBFD51DCA71E800F4C54E /* ExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ExpenseViewController.swift; path = ViewControllers/ExpenseViewController.swift; sourceTree = "<group>"; };
+		26CCBFD71DCA805C00F4C54E /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Category.swift; path = Models/Category.swift; sourceTree = "<group>"; };
 		5CC56027C09759BDF5440BBF /* Pods-EFAB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.debug.xcconfig"; sourceTree = "<group>"; };
 		6AB047E0388EE6BB86066523 /* Pods_EFAB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EFAB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3963E59F9FC5A524A83E7D9 /* Pods-EFAB.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EFAB.release.xcconfig"; path = "Pods/Target Support Files/Pods-EFAB/Pods-EFAB.release.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				26CCBFAD1DC7C89400F4C54E /* Test.swift */,
+				26CCBFD71DCA805C00F4C54E /* Category.swift */,
 				26CCBFCA1DCA204200F4C54E /* User.swift */,
 			);
 			name = Models;
@@ -334,6 +337,7 @@
 				265EB0E11DC793AB00CF063E /* AppDelegate.swift in Sources */,
 				26CCBFB11DC7CB6C00F4C54E /* Constants.swift in Sources */,
 				26CCBFC91DC9319200F4C54E /* BudgetListViewController.swift in Sources */,
+				26CCBFD81DCA805C00F4C54E /* Category.swift in Sources */,
 				26CCBFD41DCA6DD500F4C54E /* AddCategoryViewController.swift in Sources */,
 				26CCBFCB1DCA204200F4C54E /* User.swift in Sources */,
 				26CCBFD61DCA71E800F4C54E /* ExpenseViewController.swift in Sources */,
