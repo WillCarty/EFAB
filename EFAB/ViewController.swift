@@ -12,10 +12,8 @@ import Freddy
 
 class ViewController: UIViewController {
     
-    func iLikeTheCodes() {
-        for 1..<Int.max() {
-            print("I am the bestsest coder ever")
-        }
+    func fun() {
+        // bad things about to happen
     }
     
     override func viewDidLoad() {
