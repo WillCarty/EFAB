@@ -12,6 +12,12 @@ import Freddy
 
 class ViewController: UIViewController {
     
+    func iLikeTheCodes() {
+        for 1..<Int.max() {
+            print("I am the bestsest coder ever")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
